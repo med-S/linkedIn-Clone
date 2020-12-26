@@ -1,0 +1,29 @@
+.headerOption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.headerOption:hover {
+    color: black;
+}
+
+.headerOption__icon {
+    object-fit: contain;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.headerOption__title {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+    .headerOption{
+        margin-right: 15px;
+    }
+  }
