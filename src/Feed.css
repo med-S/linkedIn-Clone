@@ -55,12 +55,25 @@
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .feed__input > form > button {
         display: block;
         background-color: white;
         border: 1px solid lightgray;
         border-radius: 5px;
         cursor: pointer;
+    }
+    .feed {
+        width: 55vw;
+        margin: 0 10px;
+    }
+    .feed__input > form > input {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .feed{
+        flex: 0.8;
     }
 }

@@ -37,6 +37,15 @@ function Login() {
     const loginToApp = (e) => {
         e.preventDefault();
 
+        auth.signInWithEmailAndPassword(email,password)
+        .then((userAuth) => {
+            dispatch(login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: userAuth.user.displayName,
+                photoURL: userAuth.user.photoURL,
+            }));
+        }).catch((error) => alert(error));
     };
 
     return (
@@ -49,7 +58,7 @@ function Login() {
                 <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} type="email" />
                 <input placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
 
-                <button type="submit" onClick={loginToApp}>Sign In</button>
+                <button type="submit" onClick={loginToApp} >Sign In</button>
             </form>
 
             <p>
